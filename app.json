@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "sds-react-native-components",
+    "slug": "sds-react-native-components",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "sds-react-native-components"
+}
