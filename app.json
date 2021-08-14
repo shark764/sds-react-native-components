@@ -1,11 +1,15 @@
 {
+  "name": "sds-react-native-components",
+  "displayName": "sds-react-native-components",
   "expo": {
     "name": "sds-react-native-components",
     "slug": "sds-react-native-components",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "sds-react-native-components"
+    "platforms": ["ios", "android", "web"],
+    "assetBundlePatterns": ["**/*"],
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["expo.ts", "expo.tsx", "expo.js", "expo.jsx", "ts", "tsx", "js", "jsx", "json", "wasm", "svg"]
+    }
+  }
 }
