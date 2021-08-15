@@ -31,12 +31,21 @@ const Telicon = ({
   ...props
 }: Props): React.ReactElement => {
   const sizeValue = getSize(size);
-  const widthValue = width ?? sizeValue;
-  const heightValue = height ?? sizeValue;
+  const widthValue = sizeValue ?? width;
+  const heightValue = sizeValue ?? height;
 
   return (
-    <SvgTelicon300 width={widthValue} height={heightValue} fill={fill} fillSecondary={fillSecondary}>
-      <Use href={`#telicon-3_0_0_svg__${name}`} width={widthValue} height={heightValue} fill={fill} />
+    <SvgTelicon300
+      width={widthValue}
+      height={heightValue}
+      fill={fill}
+      fillSecondary={fillSecondary}>
+      <Use
+        href={`#telicon-3_0_0_svg__${name}`}
+        width={widthValue}
+        height={heightValue}
+        fill={fill}
+      />
     </SvgTelicon300>
   );
 };

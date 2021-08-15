@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React, { useState } from 'react';
 import { Button, Dimensions, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
-import { Button as Button2 } from '@code503/sds-react-native-components-test';
+// import { Button as Button2 } from '@code503/sds-react-native-components-test';
 import Telicon from './components/telicon/Telicon';
+import AppThemeProvider from './providers/appThemeProvider';
 
 const { width } = Dimensions.get('window');
-const iconSize = width * 0.15;
+const iconSize = width * 0.1;
 
 const colors = [
   'rgb(0, 0, 0)', // black
@@ -26,7 +29,7 @@ const colors = [
   '#47915d',
 ];
 
-const Container = styled.View`
+const Container2 = styled.View`
   flex: 1;
   background-color: #f5f5f5;
   align-items: center;
@@ -44,39 +47,112 @@ const Slider2 = styled.Slider`
   margin-top: 30px;
   width: 90%;
 `;
+const Container = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${(props: any) => props.theme.PRIMARY_BACKGROUND_COLOR};
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+`;
+
+const TextContainer = styled.View`
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid ${(props) => props.theme.PRIMARY_TEXT_COLOR};
+`;
+
+const Title = styled.Text`
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: ${(props) => props.theme.PRIMARY_TEXT_COLOR};
+`;
+
+const TouchableButton = styled.TouchableOpacity`
+  margin-top: 20px;
+  background-color: ${(props) => props.theme.SECONDARY_BUTTON_COLOR};
+  border-radius: 5px;
+  padding: 10px;
+`;
+
+const ButtonText = styled.Text`
+  font-size: 20px;
+  color: ${(props) => props.theme.SECONDARY_TEXT_COLOR};
+`;
 
 export default function App () {
   const [index, setIndex] = useState(1);
   const primaryColor = colors[index - 1];
   const secondaryColor = colors[index % colors.length];
+  const [themeMode, setThemeMode] = useState('light');
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Container>
-          <Row>
-            <Telicon name="star" size="default" fill={primaryColor} fillSecondary={secondaryColor} />
-          </Row>
+    <AppThemeProvider mode={themeMode}>
+      <SafeAreaView>
+        <ScrollView>
+          <Container>
+            <Row>
+              <Telicon
+                name="star"
+                size="small"
+                fill={primaryColor}
+                fillSecondary={secondaryColor}
+              />
+            </Row>
 
-          <Row>
-            <Telicon name="warning--octagon" size="small" fill={primaryColor} fillSecondary={secondaryColor} />
-          </Row>
+            <Row>
+              <Telicon
+                name="volume-x"
+                size="xsmall"
+                fill={secondaryColor}
+                fillSecondary={primaryColor}
+              />
+            </Row>
 
-          <Row>
-            <Telicon name="volume-x" size="medium" fill={secondaryColor} fillSecondary={primaryColor} />
-          </Row>
+            <Row>
+              <Telicon
+                name="warning--octagon"
+                size="small"
+                fill={primaryColor}
+                fillSecondary={secondaryColor}
+              />
+            </Row>
 
-          <Slider2 step={1} minimumValue={1} maximumValue={colors.length} onValueChange={setIndex} />
+            <Slider2
+              step={1}
+              minimumValue={1}
+              maximumValue={colors.length}
+              onValueChange={setIndex}
+            />
 
-          <Button2
-            type="danger"
-            content="This is a test"
-            title="This is a btn"
-            onPress={(e) => setIndex((idx) => idx + 1)}
-          />
+            {/* <Button2
+              type="danger"
+              content="This is a test"
+              title="This is a btn"
+              onPress={(e) => setIndex((idx) => idx + 1)}
+            /> */}
 
-          <Button title="This is another btn" onPress={(e) => setIndex((idx) => idx + 1)} />
-        </Container>
-      </ScrollView>
-    </SafeAreaView>
+            <Button
+              title="This is another btn"
+              onPress={(e) => setIndex((idx) => idx + 1)}
+            />
+
+            <TextContainer>
+              <Title>Themed App with React Native & Styled Components</Title>
+            </TextContainer>
+            {themeMode === 'light'
+              ? (
+                <TouchableButton onPress={(e) => setThemeMode('dark')}>
+                  <ButtonText>Switch to Dark Theme</ButtonText>
+                </TouchableButton>
+              )
+              : (
+                <TouchableButton onPress={(e) => setThemeMode('light')}>
+                  <ButtonText>Switch to Light Theme</ButtonText>
+                </TouchableButton>
+              )}
+          </Container>
+        </ScrollView>
+      </SafeAreaView>
+    </AppThemeProvider>
   );
 }

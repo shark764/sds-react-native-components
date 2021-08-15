@@ -282,7 +282,10 @@ function SvgTelicon300 ({ children, ...props }: Props) {
         <Path d="M3.4 1.4L2 0C.8 1.7 0 3.7 0 6c0 2.8 1.1 5.3 2.9 7.1l1.4-1.4C2.9 10.2 2 8.2 2 6c0-1.7.5-3.3 1.4-4.6zM12 14c-1.1 0-2-.9-2-2v-2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4h2c0-3.3-2.7-6-6-6S4 2.7 4 6c0 2.6 1.7 4.8 4 5.7v.3c0 2.2 1.8 4 4 4s4-1.8 4-4h-2c0 1.1-.9 2-2 2z" />
       </Symbol>
       <Symbol id="telicon-3_0_0_svg__edit" viewBox="0 0 16 16">
-        <Path transform="rotate(-45.001 8.884 7.116)" d="M3.6 5.1h10.5v4H3.6z" />
+        <Path
+          transform="rotate(-45.001 8.884 7.116)"
+          d="M3.6 5.1h10.5v4H3.6z"
+        />
         <Path d="M2 14l3.5-.7-2.8-2.8z" />
       </Symbol>
       <Symbol id="telicon-3_0_0_svg__ellipses" viewBox="0 0 16 16">

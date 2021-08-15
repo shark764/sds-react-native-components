@@ -126,7 +126,7 @@ module.exports = {
     'max-len': [
       'warn',
       {
-        code: 120,
+        code: 80,
         ignoreComments: true,
         ignoreTrailingComments: true,
         ignoreUrls: true,
@@ -173,7 +173,10 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react/display-name': 'off',
-    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react/jsx-curly-brace-presence': [
+      'error',
+      { props: 'never', children: 'never' },
+    ],
     'react/jsx-filename-extension': [
       1,
       {
