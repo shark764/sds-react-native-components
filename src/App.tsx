@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Dimensions, SafeAreaView, ScrollView } from 'react-native';
+import { Button, Dimensions, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
+import { Button as Button2 } from '@code503/sds-react-native-components-test';
 import Telicon from './components/telicon/Telicon';
 
 const { width } = Dimensions.get('window');
@@ -30,7 +31,7 @@ const Container = styled.View`
   background-color: #f5f5f5;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 80px;
 `;
 const Row = styled.View`
   padding: 20px;
@@ -65,6 +66,15 @@ export default function App () {
           </Row>
 
           <Slider2 step={1} minimumValue={1} maximumValue={colors.length} onValueChange={setIndex} />
+
+          <Button2
+            type="danger"
+            content="This is a test"
+            title="This is a btn"
+            onPress={(e) => setIndex((idx) => idx + 1)}
+          />
+
+          <Button title="This is another btn" onPress={(e) => setIndex((idx) => idx + 1)} />
         </Container>
       </ScrollView>
     </SafeAreaView>

@@ -183,7 +183,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'react/no-deprecated': 'warn',
     'react/prop-types': 'off',
-    'react/require-default-props': 'warn',
+    'react/require-default-props': 'off',
     'react/state-in-constructor': ['error', 'always'],
     'require-await': 'error',
     semi: 'off',
