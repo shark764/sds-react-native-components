@@ -28,8 +28,8 @@ const Telicon = ({
   name,
   fill = 'black',
   fillSecondary,
-  ...props
-}: Props): React.ReactElement => {
+}: // ...props
+Props): React.ReactElement => {
   const sizeValue = getSize(size);
   const widthValue = sizeValue ?? width;
   const heightValue = sizeValue ?? height;

@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import React, { useState } from 'react';
-import { Button, Dimensions, SafeAreaView, ScrollView } from 'react-native';
+import { Button, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 // import { Button as Button2 } from '@code503/sds-react-native-components-test';
 import Telicon from './components/telicon/Telicon';
+import type { darkTheme } from './styles/theme';
 import AppThemeProvider from './providers/appThemeProvider';
 
-const { width } = Dimensions.get('window');
-const iconSize = width * 0.1;
+// const { width } = Dimensions.get('window');
+// const iconSize = width * 0.1;
 
 const colors = [
   'rgb(0, 0, 0)', // black
@@ -29,13 +31,13 @@ const colors = [
   '#47915d',
 ];
 
-const Container2 = styled.View`
-  flex: 1;
-  background-color: #f5f5f5;
-  align-items: center;
-  justify-content: center;
-  padding: 80px;
-`;
+// const Container2 = styled.View`
+//   flex: 1;
+//   background-color: #f5f5f5;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 80px;
+// `;
 const Row = styled.View`
   padding: 20px;
   border: 4px;
@@ -55,27 +57,29 @@ const Container = styled.SafeAreaView`
   padding: 80px;
 `;
 
-const TextContainer = styled.View`
+type ThemeType = typeof darkTheme;
+
+const TextContainer = styled.View<{ theme: ThemeType; }>`
   padding: 15px;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.PRIMARY_TEXT_COLOR};
 `;
 
-const Title = styled.Text`
+const Title = styled.Text<{ theme: ThemeType; }>`
   padding: 20px;
   font-size: 24px;
   font-weight: 500;
   color: ${(props) => props.theme.PRIMARY_TEXT_COLOR};
 `;
 
-const TouchableButton = styled.TouchableOpacity`
+const TouchableButton = styled.TouchableOpacity<{ theme: ThemeType; }>`
   margin-top: 20px;
   background-color: ${(props) => props.theme.SECONDARY_BUTTON_COLOR};
   border-radius: 5px;
   padding: 10px;
 `;
 
-const ButtonText = styled.Text`
+const ButtonText = styled.Text<{ theme: ThemeType; }>`
   font-size: 20px;
   color: ${(props) => props.theme.SECONDARY_TEXT_COLOR};
 `;
@@ -133,7 +137,7 @@ export default function App () {
 
             <Button
               title="This is another btn"
-              onPress={(e) => setIndex((idx) => idx + 1)}
+              onPress={() => setIndex((idx) => idx + 1)}
             />
 
             <TextContainer>
@@ -141,12 +145,12 @@ export default function App () {
             </TextContainer>
             {themeMode === 'light'
               ? (
-                <TouchableButton onPress={(e) => setThemeMode('dark')}>
+                <TouchableButton onPress={() => setThemeMode('dark')}>
                   <ButtonText>Switch to Dark Theme</ButtonText>
                 </TouchableButton>
               )
               : (
-                <TouchableButton onPress={(e) => setThemeMode('light')}>
+                <TouchableButton onPress={() => setThemeMode('light')}>
                   <ButtonText>Switch to Light Theme</ButtonText>
                 </TouchableButton>
               )}

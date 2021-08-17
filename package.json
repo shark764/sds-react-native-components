@@ -1,55 +1,54 @@
 {
   "name": "@2600hz/sds-react-native-components",
-  "author": "Armando Cierra, Daniel Hernández",
-  "version": "0.0.1",
   "description": "React native components library",
-  "main": "index.js",
-  "license": "MIT",
+  "version": "0.0.1",
+  "author": "Armando Cierra, Daniel Hernández",
   "private": true,
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.tsx",
+  "source": "src/index",
+  "types": "lib/typescript/src/index.d.ts",
   "files": [
-    "build"
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!android/build",
+    "!ios/build",
+    "!lib/typescript/example",
+    "android",
+    "build",
+    "cpp",
+    "ios"
   ],
   "scripts": {
     "android": "react-native run-android",
     "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
-    "ios": "react-native run-ios",
-    "web": "expo start --web",
-    "start": "react-native start",
-    "expo:start": "BROWSER=none expo start",
+    "build-storybook": "build-storybook",
+    "eject": "expo eject",
     "expo:android": "expo start --android",
     "expo:ios": "expo start --ios",
-    "prestorybook": "rnstl",
-    "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook",
+    "expo:start": "BROWSER=none expo start",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|html)\"",
+    "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|html)\"",
+    "prepare": "bob build && husky install",
+    "prestorybook": "rnstl",
     "prettify": "yarn run format && yarn run lint:fix",
-    "prepare": "husky install",
-    "eject": "expo eject",
+    "start": "react-native start",
+    "storybook": "start-storybook -p 7007",
+    "svg:jsx": "svgr src/assets/telicon-3.0.0.svg > src/components/telicon/SvgTelicon.tsx",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "svg:jsx": "svgr src/assets/telicon-3.0.0.svg > src/components/telicon/SvgTelicon.tsx"
+    "web": "expo start --web"
   },
   "lint-staged": {
     "./**/*.{js,ts,jsx,tsx}": [
       "yarn run prettify"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/2600hz/sds-react-native-components.git"
-  },
-  "bugs": {
-    "url": "https://github.com/2600hz/sds-react-native-components/issues"
-  },
-  "homepage": "https://github.com/2600hz/sds-react-native-components#readme",
-  "keywords": [
-    "sds",
-    "react-native",
-    "components",
-    "ui",
-    "design"
-  ],
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
@@ -84,9 +83,7 @@
     "@svgr/cli": "^5.5.0",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
-    "@types/prop-types": "^15.7.4",
     "@types/react": "~16.9.35",
-    "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
     "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components": "^5.1.12",
@@ -114,6 +111,7 @@
     "lint-staged": "^11.1.2",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "^2.3.2",
+    "react-native-builder-bob": "^0.18.1",
     "react-native-storybook-loader": "^2.0.4",
     "react-native-svg-transformer": "^0.14.3",
     "rimraf": "^3.0.2",
@@ -123,17 +121,43 @@
   },
   "peerDependencies": {
     "@2600hz/sds-core": "^1.0.5",
-    "@2600hz/sds-telicon": "^1.0.3"
+    "@2600hz/sds-telicon": "^1.0.3",
+    "react": "*",
+    "react-native": "*"
   },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
     ]
+  },
+  "keywords": [
+    "android",
+    "components",
+    "design",
+    "ios",
+    "mobile",
+    "react",
+    "react-native",
+    "sds",
+    "svg",
+    "ui"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/2600hz/sds-react-native-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2600hz/sds-react-native-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2600hz/sds-react-native-components/issues"
   }
 }

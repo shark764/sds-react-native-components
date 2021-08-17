@@ -8,7 +8,7 @@ type Props = SvgProps & {
 
 function SvgTelicon300 ({ children, ...props }: Props) {
   return (
-    <Svg xmlns="http://www.w3.org/2000/svg" {...props}>
+    <Svg {...props}>
       <Symbol id="telicon-3_0_0_svg__account-tree" viewBox="0 0 16 16">
         <Path d="M0 1h8v3H0zm8 9V8H5V6H3v9h5v-2H5v-3zm2-2h6v3h-6zm0 5h6v3h-6z" />
       </Symbol>
@@ -696,7 +696,7 @@ function SvgTelicon300 ({ children, ...props }: Props) {
       </Symbol>
       <Symbol id="telicon-3_0_0_svg__volume-slash" viewBox="0 0 16 16">
         <Path
-          className="telicon-3_0_0_svg__st0"
+          // className="telicon-3_0_0_svg__st0"
           d="M14.2 2.8C15.3 4.2 16 6 16 8c0 3.8-2.5 7-6 7.9V14c2.5-.9 4.2-3.2 4.2-6 0-1.5-.5-2.8-1.3-3.9l-1.6 1.6c.4.7.7 1.4.7 2.3 0 1.5-.8 2.8-2 3.5V7L8 9v7l-3.5-3.5L1 16l-1-1L15 0l1 1-1.8 1.8zM12 1c-.6-.4-1.3-.7-2-.9V2c.2.1.5.2.7.3L12 1zM8 5V0L3 5H0v6h2l6-6z"
         />
       </Symbol>
