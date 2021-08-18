@@ -26,30 +26,30 @@
   "scripts": {
     "android": "react-native run-android",
     "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
-    "build-storybook": "build-storybook",
-    "eject": "expo eject",
     "expo:android": "expo start --android",
-    "expo:ios": "expo start --ios",
-    "expo:start": "BROWSER=none expo start",
-    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|html)\"",
     "ios": "react-native run-ios",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "expo:ios": "expo start --ios",
+    "web": "expo start --web",
+    "start": "react-native start",
+    "expo:start": "BROWSER=none expo start",
+    "eject": "expo eject",
+    "pre-commit": "lint-staged",
     "prepare": "bob build && husky install",
     "prestorybook": "rnstl",
-    "prettify": "yarn run format && yarn run lint:fix",
-    "start": "react-native start",
+    "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 7007",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|html)\"",
+    "prettify": "yarn run format && yarn run lint:fix",
+    "full-check": "yarn run prettify && yarn run typescript",
+    "release": "release-it",
     "svg:jsx": "svgr src/assets/telicon-3.0.0.svg > src/components/telicon/SvgTelicon.tsx",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "expo start --web"
-  },
-  "lint-staged": {
-    "./**/*.{js,ts,jsx,tsx}": [
-      "yarn run prettify"
-    ]
+    "test": "jest"
   },
   "dependencies": {
+    "@commitlint/cli": "^13.1.0",
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
     "expo-asset": "~8.3.3",
@@ -72,7 +72,9 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
+    "@release-it/conventional-changelog": "^2.0.0",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
@@ -94,6 +96,7 @@
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-expo": "8.3.0",
+    "commitlint": "^11.0.0",
     "concurrently": "^6.2.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -103,17 +106,21 @@
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.0",
+    "jest": "^26.0.1",
     "jest-expo": "^42.0.0",
     "lint-staged": "^11.1.2",
     "metro-react-native-babel-preset": "^0.66.2",
+    "pod-install": "^0.1.0",
     "prettier": "^2.3.2",
     "react-native-builder-bob": "^0.18.1",
     "react-native-storybook-loader": "^2.0.4",
     "react-native-svg-transformer": "^0.14.3",
+    "release-it": "^14.2.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.4",
     "tslint": "^6.1.3",
@@ -124,6 +131,26 @@
     "@2600hz/sds-telicon": "^1.0.3",
     "react": "*",
     "react-native": "*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
   },
   "react-native-builder-bob": {
     "source": "src",

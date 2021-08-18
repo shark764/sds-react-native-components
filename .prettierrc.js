@@ -1,11 +1,13 @@
 // .prettierrc.js
 
 module.exports = {
+  arrowParens: 'always',
   bracketSpacing: true,
   jsxBracketSameLine: true,
-  singleQuote: true,
-  trailingComma: 'es5',
   printWidth: 80,
-  arrowParens: 'always',
+  quoteProps: 'consistent',
+  singleQuote: true,
   tabWidth: 2,
+  trailingComma: 'es5',
+  useTabs: false,
 };

@@ -21,6 +21,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
+    'prettier',
     'standard-with-typescript',
   ],
   parser: '@typescript-eslint/parser',

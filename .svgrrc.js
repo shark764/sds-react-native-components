@@ -4,11 +4,11 @@ module.exports = {
   typescript: true,
   replaceAttrValues: {
     '#000': '{props.fill}',
-    primary: '{props.fill}',
+    'primary': '{props.fill}',
     '#f00': '{props.fillSecondary}',
-    secondary: '{props.fillSecondary}',
+    'secondary': '{props.fillSecondary}',
     '#111': '{props.stroke}',
-    red: 'currentColor',
+    'red': 'currentColor',
     '#063855': 'currentColor',
   },
   svgoConfig: {
