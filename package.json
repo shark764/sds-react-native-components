@@ -1,7 +1,7 @@
 {
   "name": "@2600hz/sds-react-native-components",
-  "description": "React native components library",
   "version": "0.0.1",
+  "description": "React native components library",
   "author": "Armando Cierra, Daniel Hernández",
   "private": true,
   "main": "lib/commonjs/index.js",
@@ -41,7 +41,7 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|html)\"",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "prettify": "yarn run format && yarn run lint:fix",
     "full-check": "yarn run prettify && yarn run typescript",
     "release": "release-it",
@@ -49,7 +49,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@commitlint/cli": "^13.1.0",
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
     "expo-asset": "~8.3.3",
@@ -72,6 +71,7 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
@@ -134,23 +134,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "react-native-builder-bob": {
     "source": "src",
