@@ -6,8 +6,9 @@ interface Props {
   mode: string;
   children: React.ReactNode;
 }
+type Theme = typeof darkTheme;
 
-const themeMap: { [key: string]: any; } = {
+const themeMap: { [key: string]: Theme; } = {
   light: lightTheme,
   dark: darkTheme,
 };
@@ -16,7 +17,7 @@ function AppThemeProvider ({
   mode = 'dark',
   children,
 }: Props): React.ReactElement {
-  const theme = themeMap[mode];
+  const theme: Theme = themeMap[mode];
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 

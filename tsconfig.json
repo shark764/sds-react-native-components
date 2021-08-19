@@ -42,13 +42,16 @@
     "target": "ESNext"
   },
   "exclude": [
-    "__tests__/**/*-test.ts",
-    "babel.config.js",
+    "node_modules",
     "build",
+    "__tests__ /**/*-test.ts",
     "coverage",
+    ".eslintrc.js",
+    "babel.config.js",
+    "commitlint.config.js",
     "jest.config.js",
-    "metro.config.js",
-    "node_modules"
+    "lint-staged.config.js",
+    "metro.config.js"
   ],
   "extends": "expo/tsconfig.base",
   "filesGlob": [
@@ -57,6 +60,6 @@
     "src/**/*.tsx",
     "node_modules/typescript/lib/lib.es6.d.ts"
   ],
-  "include": ["**/*.js", "**/*.ts", "./*", "./**/*", "./src", ".eslintrc.js"],
+  "include": ["**/*.js", "**/*.ts", "./*", "./**/*", "./src"],
   "types": ["react", "react-dom", "react-native", "react-test-renderer", "jest"]
 }

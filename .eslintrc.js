@@ -1,11 +1,11 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
-    node: true,
-    jest: true,
-    browser: true,
-    es2021: true,
+    'es6': true,
+    'node': true,
+    'jest': true,
+    'browser': true,
+    'es2021': true,
     'react-native/react-native': true,
   },
   extends: [
@@ -27,7 +27,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: './tsconfig.json',
+    project: ['tsconfig.eslint.json'],
     ecmaFeatures: {
       jsx: true,
     },
@@ -82,7 +82,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'comma-dangle': 'off',
     'default-case': 'error',
-    eqeqeq: [2, 'smart'],
+    'eqeqeq': [2, 'smart'],
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': [
@@ -119,11 +119,11 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-    indent: 'off',
-    'jsx-quotes': ['error', 'prefer-double'],
-    'linebreak-style': ['error', 'unix'],
+    'indent': 'off',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'jsx-a11y/label-has-associated-control': 'warn',
+    'jsx-quotes': ['error', 'prefer-double'],
+    'linebreak-style': ['error', 'unix'],
     'max-len': [
       'warn',
       {
@@ -170,13 +170,16 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'off',
-    quotes: ['error', 'single'],
+    'quotes': ['error', 'single'],
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react/display-name': 'off',
     'react/jsx-curly-brace-presence': [
       'error',
-      { props: 'never', children: 'never' },
+      {
+        props: 'never',
+        children: 'never',
+      },
     ],
     'react/jsx-filename-extension': [
       1,
@@ -190,11 +193,11 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/state-in-constructor': ['error', 'always'],
     'require-await': 'error',
-    semi: 'off',
+    'semi': 'off',
     'valid-typeof': 'error',
   },
   settings: {
-    react: {
+    'react': {
       version: 'detect',
     },
     'import/parsers': {
