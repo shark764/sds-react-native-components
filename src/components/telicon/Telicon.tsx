@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgProps, Use } from 'react-native-svg';
-import SvgTelicon300 from './SvgTelicon';
+import SvgTelicon from './SvgTelicon';
 
 type Sizes = 'default' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 
@@ -21,7 +21,7 @@ const sizes: { [key: string]: number; } = {
 
 const getSize = (value: string) => sizes[value];
 
-const Telicon = ({
+export function Telicon ({
   size = 'default',
   width = 100,
   height = 100,
@@ -29,25 +29,25 @@ const Telicon = ({
   fill = 'black',
   fillSecondary,
 }: // ...props
-Props): React.ReactElement => {
+Props): React.ReactElement {
   const sizeValue = getSize(size);
   const widthValue = sizeValue ?? width;
   const heightValue = sizeValue ?? height;
 
   return (
-    <SvgTelicon300
+    <SvgTelicon
       width={widthValue}
       height={heightValue}
       fill={fill}
       fillSecondary={fillSecondary}>
       <Use
-        href={`#telicon-3_0_0_svg__${name}`}
+        href={`#${name}`}
         width={widthValue}
         height={heightValue}
         fill={fill}
       />
-    </SvgTelicon300>
+    </SvgTelicon>
   );
-};
+}
 
 export default Telicon;

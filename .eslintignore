@@ -9,6 +9,7 @@ webpack.config.js
 commitlint.config.js
 lint-staged.config.js
 .eslintrc.js
+.svgrrc.js
 
 .env
 public
