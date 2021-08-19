@@ -1,17 +1,8 @@
 // Learn more https://docs.expo.io/guides/customizing-metro
 
-// const path = require('path');
-
 // expo v41:
 // remove the @ (see: https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
 const { getDefaultConfig } = require('expo/metro-config');
-
-// react-native >= 0.57
-
-// const extraNodeModules = {
-//   '@code503': path.resolve(__dirname + '/../bck-sds-react-native-components/'),
-// };
-// const watchFolders = [path.resolve(__dirname + '/../bck-sds-react-native-components/')];
 
 module.exports = (async () => {
   const {
@@ -30,8 +21,6 @@ module.exports = (async () => {
     resolver: {
       assetExts: assetExts.filter((ext) => ext !== 'svg'),
       sourceExts: [...sourceExts, 'svg'],
-      // extraNodeModules,
     },
-    // watchFolders,
   };
 })();

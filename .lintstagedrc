@@ -1,8 +1,0 @@
-{
-  "./**/*.{js,jsx,ts,tsx}": [
-    "yarn run prettify"
-  ],
-  "src/**/*.{js,jsx,ts,tsx}": [
-    "yarn run typescript"
-  ]
-}

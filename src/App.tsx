@@ -84,7 +84,7 @@ const ButtonText = styled.Text<{ theme: ThemeType; }>`
   color: ${(props) => props.theme.SECONDARY_TEXT_COLOR};
 `;
 
-export default function App () {
+export function App () {
   const [index, setIndex] = useState(1);
   const primaryColor = colors[index - 1];
   const secondaryColor = colors[index % colors.length];
@@ -160,3 +160,5 @@ export default function App () {
     </AppThemeProvider>
   );
 }
+
+export default App;
