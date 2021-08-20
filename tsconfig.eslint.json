@@ -9,6 +9,7 @@
     // paths we intend to lint
     "**/*",
     "src/**/*.ts",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    ".svgrrc.js"
   ]
 }
