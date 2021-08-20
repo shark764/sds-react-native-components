@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components/native';
 import type { Props } from './types';
 
-const StyledText = styled.Text<{ color: string; size: number; }>`
-  color: ${({ color }) => color};
-  font-size: ${({ size }) => size}px;
+interface STTheme {
+  color: string;
+  size: number;
+}
+
+const StyledText = styled.Text<STTheme>`
+  color: ${({ color }: STTheme) => color};
+  font-size: ${({ size }: STTheme) => size}px;
 `;
 
 const sizesMap: { [key: string]: number; } = {

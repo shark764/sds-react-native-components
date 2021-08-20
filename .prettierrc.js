@@ -6,7 +6,7 @@ module.exports = {
   endOfLine: 'lf',
   jsxBracketSameLine: true,
   printWidth: 80,
-  quoteProps: 'consistent',
+  // quoteProps: 'consistent',
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',

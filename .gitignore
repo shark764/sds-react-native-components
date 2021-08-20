@@ -2,6 +2,13 @@
 #
 .DS_Store
 
+# XDE
+.expo/
+
+# VSCode
+.vscode/
+jsconfig.json
+
 # Xcode
 #
 build/
@@ -27,6 +34,7 @@ project.xcworkspace
 .idea
 .gradle
 local.properties
+android.iml
 *.iml
 *.hprof
 
@@ -38,6 +46,7 @@ node_modules/
 # Logs
 *.log
 npm-debug.log
+yarn-debug.log
 yarn-debug.log*
 yarn-error.log
 
@@ -46,6 +55,8 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
+android/app/libs
+android/keystores/debug.keystore
 
 # Bundle artifacts
 *.jsbundle

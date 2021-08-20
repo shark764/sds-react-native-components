@@ -126,4 +126,5 @@ fix: Touchable component not being exported correctly
 ```
 
 ## License
-[ISC](https://opensource.org/licenses/ISC)
+
+MIT

@@ -31,6 +31,7 @@ android
 
 *.stories.tsx
 *.test.tsx
+# __tests__
 
 storybook/**
 

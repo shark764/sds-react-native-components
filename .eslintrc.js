@@ -1,11 +1,11 @@
 module.exports = {
   root: true,
   env: {
-    'es6': true,
-    'node': true,
-    'jest': true,
-    'browser': true,
-    'es2021': true,
+    es6: true,
+    node: true,
+    jest: true,
+    browser: true,
+    es2021: true,
     'react-native/react-native': true,
   },
   extends: [
@@ -74,6 +74,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'warn',
     '@typescript-eslint/no-unsafe-member-access': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-use-before-define': ['error'],
@@ -82,7 +83,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'comma-dangle': 'off',
     'default-case': 'error',
-    'eqeqeq': [2, 'smart'],
+    eqeqeq: [2, 'smart'],
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': [
@@ -119,7 +120,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-    'indent': 'off',
+    indent: 'off',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'jsx-a11y/label-has-associated-control': 'warn',
     'jsx-quotes': ['error', 'prefer-double'],
@@ -170,7 +171,7 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'off',
-    'quotes': ['error', 'single'],
+    quotes: ['error', 'single'],
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react/display-name': 'off',
@@ -193,11 +194,11 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/state-in-constructor': ['error', 'always'],
     'require-await': 'error',
-    'semi': 'off',
+    semi: 'off',
     'valid-typeof': 'error',
   },
   settings: {
-    'react': {
+    react: {
       version: 'detect',
     },
     'import/parsers': {

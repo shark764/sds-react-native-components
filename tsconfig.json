@@ -47,6 +47,7 @@
     "__tests__ /**/*-test.ts",
     "coverage",
     ".eslintrc.js",
+    ".svgrrc.js",
     "babel.config.js",
     "commitlint.config.js",
     "jest.config.js",

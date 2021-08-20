@@ -3,9 +3,13 @@ import React from 'react';
 import styled from 'styled-components/native';
 import type { Props } from './types';
 
-const TouchableButton = styled.TouchableOpacity<{ color: string; }>`
+interface TBTheme {
+  color: string;
+}
+
+const TouchableButton = styled.TouchableOpacity<TBTheme>`
   margin-top: 20px;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color }: TBTheme) => color};
   border-radius: 5px;
   padding: 10px;
 `;

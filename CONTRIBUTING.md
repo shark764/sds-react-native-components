@@ -12,30 +12,44 @@ yarn
 
 > While it's possible to use [`npm`](https://github.com/npm/cli), the tooling is built around [`yarn`](https://classic.yarnpkg.com/), so you'll have an easier time if you use `yarn` for development.
 
-While developing, you can run the [example app](/example/) to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
+While developing, you can run the [userportal app](https://github.com/shark764/react-native-commio-userportal) to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
 
 To start the packager:
 
 ```sh
-yarn example start
+yarn expo:start
 ```
 
 To run the example app on Android:
 
 ```sh
-yarn example android
+yarn start:android
+```
+or
+```sh
+yarn expo:android
 ```
 
 To run the example app on iOS:
 
 ```sh
-yarn example ios
+yarn start:ios
+```
+or
+```sh
+yarn expo:ios
 ```
 
 To run the example app on Web:
 
 ```sh
-yarn example web
+yarn web
+```
+
+Format your code with prettier
+
+```sh
+yarn format
 ```
 
 Make sure your code passes TypeScript and ESLint. Run the following to verify:
@@ -49,6 +63,15 @@ To fix formatting errors, run the following:
 
 ```sh
 yarn lint --fix
+```
+or
+```sh
+yarn lint:fix
+```
+
+To perform a full check (lint --fix | prettier | typescript)
+```sh
+yarn full-check
 ```
 
 Remember to add tests for your change if possible. Run the unit tests by:
@@ -92,13 +115,13 @@ yarn release
 
 The `package.json` file contains various scripts for common tasks:
 
-- `yarn bootstrap`: setup project by installing all dependencies and pods.
 - `yarn typescript`: type-check files with TypeScript.
 - `yarn lint`: lint files with ESLint.
 - `yarn test`: run unit tests with Jest.
-- `yarn example start`: start the Metro server for the example app.
-- `yarn example android`: run the example app on Android.
-- `yarn example ios`: run the example app on iOS.
+- `yarn expo:start`: start the Metro server for the app.
+- `yarn`: install all dependencies and generate lib/ folder.
+- `yarn link`: create symlink.
+- `yarn link @2600hz/sds-react-native-components`: consume symlink on [userportal app](https://github.com/shark764/react-native-commio-userportal).
 
 ### Sending a pull request
 
