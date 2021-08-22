@@ -71,6 +71,22 @@ _Automatically will run `bob build`_
 yarn
 ```
 
+**Run project**
+```bash
+yarn install
+```
+
+Run android
+```bash
+yarn android
+```
+
+Run ios
+```bash
+cd ios & pod install
+yarn ios
+```
+
 ## Utilities
 
 Format code using [Eslint](https://eslint.org/)

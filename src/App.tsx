@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 import React, { useState } from 'react';
 import { Button, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
@@ -31,6 +28,11 @@ const colors = [
   '#47915d',
 ];
 
+type ThemeType = typeof darkTheme;
+interface StyledThemeType {
+  theme: ThemeType;
+}
+
 // const Container2 = styled.View`
 //   flex: 1;
 //   background-color: #f5f5f5;
@@ -49,39 +51,40 @@ const Slider2 = styled.Slider`
   margin-top: 30px;
   width: 90%;
 `;
-const Container = styled.SafeAreaView`
+const Container = styled.SafeAreaView<StyledThemeType>`
   flex: 1;
-  background-color: ${(props: any) => props.theme.PRIMARY_BACKGROUND_COLOR};
+  background-color: ${(props: StyledThemeType) =>
+    props.theme.PRIMARY_BACKGROUND_COLOR};
   justify-content: center;
   align-items: center;
   padding: 80px;
 `;
 
-type ThemeType = typeof darkTheme;
-
-const TextContainer = styled.View<{ theme: ThemeType; }>`
+const TextContainer = styled.View<StyledThemeType>`
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid ${(props) => props.theme.PRIMARY_TEXT_COLOR};
+  border: 1px solid
+    ${(props: StyledThemeType) => props.theme.PRIMARY_TEXT_COLOR};
 `;
 
-const Title = styled.Text<{ theme: ThemeType; }>`
+const Title = styled.Text<StyledThemeType>`
   padding: 20px;
   font-size: 24px;
   font-weight: 500;
-  color: ${(props) => props.theme.PRIMARY_TEXT_COLOR};
+  color: ${(props: StyledThemeType) => props.theme.PRIMARY_TEXT_COLOR};
 `;
 
-const TouchableButton = styled.TouchableOpacity<{ theme: ThemeType; }>`
+const TouchableButton = styled.TouchableOpacity<StyledThemeType>`
   margin-top: 20px;
-  background-color: ${(props) => props.theme.SECONDARY_BUTTON_COLOR};
+  background-color: ${(props: StyledThemeType) =>
+    props.theme.SECONDARY_BUTTON_COLOR};
   border-radius: 5px;
   padding: 10px;
 `;
 
-const ButtonText = styled.Text<{ theme: ThemeType; }>`
+const ButtonText = styled.Text<StyledThemeType>`
   font-size: 20px;
-  color: ${(props) => props.theme.SECONDARY_TEXT_COLOR};
+  color: ${(props: StyledThemeType) => props.theme.SECONDARY_TEXT_COLOR};
 `;
 
 export function App () {
@@ -89,6 +92,7 @@ export function App () {
   const primaryColor = colors[index - 1];
   const secondaryColor = colors[index % colors.length];
   const [themeMode, setThemeMode] = useState('light');
+
   return (
     <AppThemeProvider mode={themeMode}>
       <SafeAreaView>

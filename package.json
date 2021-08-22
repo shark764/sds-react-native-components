@@ -12,14 +12,15 @@
   "files": [
     "src",
     "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
+    "android",
+    "ios",
+    "cpp",
+    "sds-react-native-components.podspec",
     "!android/build",
     "!ios/build",
-    "android",
-    "cpp",
-    "ios"
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
   ],
   "scripts": {
     "android": "react-native run-android",
@@ -38,13 +39,16 @@
     "storybook": "start-storybook -p 7007",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:fix": "yarn lint --fix",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "prettify": "yarn run format && yarn run lint:fix",
     "full-check": "yarn run prettify && yarn run typescript",
     "release": "release-it",
     "svg:jsx": "svgr src/assets/telicon-3.0.0.svg > src/components/telicon/SvgTelicon.tsx",
-    "test": "jest"
+    "test": "jest",
+    "example": "yarn --cwd example",
+    "pods": "cd example && pod-install --quiet",
+    "bootstrap": "yarn example && yarn && yarn pods"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
@@ -69,7 +73,6 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
-    "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
@@ -129,7 +132,8 @@
     "@2600hz/sds-telicon": "^1.0.3",
     "react": "*",
     "react-native": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "styled-components": "*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
