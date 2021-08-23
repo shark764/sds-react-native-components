@@ -35,7 +35,7 @@
       "@styles/*": ["src/styles/*"],
       "@utilities/*": ["src/utilities/*"],
       "tests": ["tests/*"],
-      "@2600hz/sds-react-native-components": ["./src/index"]
+      "@dfhernandez/sds-react-native-components": ["./src/index"]
     },
     "preserveConstEnums": true,
     "removeComments": true,

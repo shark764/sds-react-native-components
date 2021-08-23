@@ -1,9 +1,8 @@
 {
-  "name": "@2600hz/sds-react-native-components",
+  "name": "@dfhernandez/sds-react-native-components",
   "version": "1.0.0",
   "description": "React native components library",
   "author": "Armando Cierra, Daniel Hernandez <fhernandez@2600hz.com> (https://github.com/shark764)",
-  "private": true,
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.tsx",
@@ -139,6 +138,7 @@
     "node": ">=14"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "react-native-builder-bob": {

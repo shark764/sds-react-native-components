@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
-// import { Button as Button2 } from '@code503/@2600hz/sds-react-native-components-test';
+// import { Button as Button2 } from '@code503/@dfhernandez/sds-react-native-components-test';
 import Telicon from './components/telicon/Telicon';
 import type { darkTheme } from './styles/theme';
 import AppThemeProvider from './providers/appThemeProvider';
