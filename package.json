@@ -135,6 +135,9 @@
     "react-native-svg": "*",
     "styled-components": "*"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
