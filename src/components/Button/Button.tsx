@@ -1,15 +1,20 @@
 import React from 'react';
 
 import styled from 'styled-components/native';
+import type { darkTheme } from '@/styles/theme';
 import type { Props } from './types';
 
-interface TBTheme {
-  color: string;
+type ThemeType = typeof darkTheme;
+interface StyledThemeType {
+  theme: ThemeType;
+  color?: string;
 }
 
-const TouchableButton = styled.TouchableOpacity<TBTheme>`
+const TouchableButton = styled.TouchableOpacity<StyledThemeType>`
   margin-top: 20px;
-  background-color: ${({ color }: TBTheme) => color};
+  background-color: ${({ color }: StyledThemeType) => color};
+  color: ${(props: StyledThemeType) =>
+    props.color ?? props.theme.SECONDARY_TEXT_COLOR};
   border-radius: 5px;
   padding: 10px;
 `;
@@ -22,7 +27,7 @@ const SdsButton = ({
   title,
   disabled = false,
   onPress,
-  color = 'green',
+  color /* = 'green' */,
 }: Props) => (
   <TouchableButton onPress={onPress} disabled={disabled} color={color}>
     <ButtonText>{title.toUpperCase()}</ButtonText>
