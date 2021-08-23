@@ -12,7 +12,8 @@ interface StyledThemeType {
 
 const TouchableButton = styled.TouchableOpacity<StyledThemeType>`
   margin-top: 20px;
-  background-color: ${({ color }: StyledThemeType) => color};
+  background-color: ${(props: StyledThemeType) =>
+    props.color ?? props.theme.SECONDARY_BUTTON_COLOR};
   color: ${(props: StyledThemeType) =>
     props.color ?? props.theme.SECONDARY_TEXT_COLOR};
   border-radius: 5px;
