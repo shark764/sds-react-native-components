@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { Button, SafeAreaView, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
-// import { Button as Button2 } from '@code503/@dfhernandez/sds-react-native-components-test';
 import Telicon from './components/telicon/Telicon';
 import type { darkTheme } from './styles/theme';
 import AppThemeProvider from './providers/appThemeProvider';
-
-// const { width } = Dimensions.get('window');
-// const iconSize = width * 0.1;
 
 const colors = [
   'rgb(0, 0, 0)', // black
@@ -33,13 +29,6 @@ interface StyledThemeType {
   theme: ThemeType;
 }
 
-// const Container2 = styled.View`
-//   flex: 1;
-//   background-color: #f5f5f5;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 80px;
-// `;
 const Row = styled.View`
   padding: 20px;
   border: 4px;
@@ -131,13 +120,6 @@ export function App () {
               maximumValue={colors.length}
               onValueChange={setIndex}
             />
-
-            {/* <Button2
-              type="danger"
-              content="This is a test"
-              title="This is a btn"
-              onPress={(e) => setIndex((idx) => idx + 1)}
-            /> */}
 
             <Button
               title="This is another btn"

@@ -1,3 +1,3 @@
 export * from './telicon';
-export * from './Button';
-export * from './TextInfo';
+export * from './button';
+export * from './text';

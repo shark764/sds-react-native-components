@@ -16,7 +16,7 @@ function svgToJsxTemplate (
 
   const typeScriptTemplate = template.smart({ plugins });
 
-  const typedProps = '{ children, ...props }: Props';
+  const typedProps = '{ children, ...props }: SvgTeliconProps';
 
   const modifiedJsx = jsxElement(
     jsx.openingElement,
@@ -27,13 +27,7 @@ function svgToJsxTemplate (
 
   return typeScriptTemplate.ast`${imports}
 
-${`
-type Props = SvgProps & {
-  fillSecondary: string;
-  children: React.ReactNode;
-};
-
-`}
+import type { SvgTeliconProps } from './types';
 
 ${interfaces}
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import type { Props } from './types';
+import { getFontSize } from '../../utilities/utilities';
+import type { TextInfoProps } from './types';
 
 interface STTheme {
   color: string;
@@ -12,23 +13,13 @@ const StyledText = styled.Text<STTheme>`
   font-size: ${({ size }: STTheme) => size}px;
 `;
 
-const sizesMap: { [key: string]: number; } = {
-  default: 14,
-  xsmall: 10,
-  small: 12,
-  medium: 14,
-  large: 18,
-  xlarge: 22,
-};
-const getFontSize = (size: string) => sizesMap[size];
-
-const SdsText = ({
+function SdsText ({
   content,
   // type = 'base',
   size = 'default',
   color = 'green',
   children,
-}: Props) => {
+}: TextInfoProps) {
   const fontSize = getFontSize(size);
   return (
     <StyledText size={fontSize} color={color}>
@@ -36,6 +27,6 @@ const SdsText = ({
       {children}
     </StyledText>
   );
-};
+}
 
 export default SdsText;

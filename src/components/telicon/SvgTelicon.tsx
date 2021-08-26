@@ -1,12 +1,8 @@
 import * as React from 'react';
-import Svg, { SvgProps, Symbol, Path, Ellipse, Circle } from 'react-native-svg';
+import Svg, { Symbol, Path, Ellipse, Circle } from 'react-native-svg';
+import type { SvgTeliconProps } from './types';
 
-type Props = SvgProps & {
-  fillSecondary: string;
-  children: React.ReactNode;
-};
-
-function SvgTelicon300 ({ children, ...props }: Props) {
+function SvgTelicon300 ({ children, ...props }: SvgTeliconProps) {
   return (
     <Svg {...props}>
       <Symbol id="account-tree" viewBox="0 0 16 16">

@@ -19,6 +19,7 @@ module.exports = function (api) {
             '@providers': './src/providers',
             '@shared': './src/shared',
             '@styles': './src/styles',
+            '@types': './src/types',
             '@utilities': './src/utilities',
             tests: ['./tests/'],
           },

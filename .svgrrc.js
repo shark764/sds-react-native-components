@@ -27,5 +27,6 @@ module.exports = {
       { removeXMLNS: true },
     ],
   },
-  template: require('./templates/svgr-template'),
+  // We only need template for SvgTelicon component
+  // template: require('./templates/svgr-template'),
 };
