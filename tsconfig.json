@@ -24,18 +24,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@config/*": ["src/config/*"],
-      "@helpers/*": ["src/helpers/*"],
-      "@modules/*": ["src/modules/*"],
-      "@providers/*": ["src/providers/*"],
-      "@shared/*": ["src/shared/*"],
-      "@styles/*": ["src/styles/*"],
-      "@types/*": ["src/types/*"],
-      "@utilities/*": ["src/utilities/*"],
-      "tests": ["tests/*"],
       "@dfhernandez/sds-react-native-components": ["./src/index"]
     },
     "preserveConstEnums": true,

@@ -9,20 +9,6 @@ module.exports = function (api) {
         {
           root: ['./src'],
           extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
-          alias: {
-            '@': './src',
-            '@assets': './src/assets',
-            '@components': './src/components',
-            '@config': './src/config',
-            '@helpers': './src/helpers',
-            '@modules': './src/modules',
-            '@providers': './src/providers',
-            '@shared': './src/shared',
-            '@styles': './src/styles',
-            '@types': './src/types',
-            '@utilities': './src/utilities',
-            tests: ['./tests/'],
-          },
         },
       ],
       // [

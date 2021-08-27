@@ -18,13 +18,15 @@ export type SizeProps =
 
 export type PositionProps = 'start' | 'end';
 
+export interface ThemeModeProps {
+  mode: 'light' | 'dark';
+  PRIMARY_BACKGROUND_COLOR: string;
+  PRIMARY_TEXT_COLOR: string;
+  SECONDARY_TEXT_COLOR: string;
+  PRIMARY_BUTTON_COLOR: string;
+  SECONDARY_BUTTON_COLOR: string;
+}
+
 export interface ThemeProps {
-  theme: {
-    mode: 'light' | 'dark';
-    PRIMARY_BACKGROUND_COLOR: string;
-    PRIMARY_TEXT_COLOR: string;
-    SECONDARY_TEXT_COLOR: string;
-    PRIMARY_BUTTON_COLOR: string;
-    SECONDARY_BUTTON_COLOR: string;
-  };
+  theme: ThemeModeProps;
 }

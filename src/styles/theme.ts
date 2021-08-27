@@ -1,16 +1,18 @@
-export const darkTheme = {
+import type { ThemeModeProps } from '../utilities/types';
+
+export const darkTheme: ThemeModeProps = {
   mode: 'dark',
-  PRIMARY_BACKGROUND_COLOR: '#353c51',
-  PRIMARY_TEXT_COLOR: '#767d92',
-  SECONDARY_TEXT_COLOR: '#ffffff',
-  PRIMARY_BUTTON_COLOR: '#152642',
-  SECONDARY_BUTTON_COLOR: '#506680',
+  PRIMARY_BACKGROUND_COLOR: '#740001',
+  PRIMARY_TEXT_COLOR: '#ae0001',
+  SECONDARY_TEXT_COLOR: '#eeba30',
+  PRIMARY_BUTTON_COLOR: '#d3a625',
+  SECONDARY_BUTTON_COLOR: '#000000',
 };
-export const lightTheme = {
+export const lightTheme: ThemeModeProps = {
   mode: 'light',
-  PRIMARY_BACKGROUND_COLOR: '#ffefd5',
-  PRIMARY_TEXT_COLOR: '#DB7093',
-  SECONDARY_TEXT_COLOR: '#333333',
-  PRIMARY_BUTTON_COLOR: '#b9d6f3',
-  SECONDARY_BUTTON_COLOR: '#a1c9f1',
+  PRIMARY_BACKGROUND_COLOR: '#fffefc',
+  PRIMARY_TEXT_COLOR: '#880000',
+  SECONDARY_TEXT_COLOR: '#5d5d5d',
+  PRIMARY_BUTTON_COLOR: '#9e9e9e',
+  SECONDARY_BUTTON_COLOR: '#dedede',
 };
