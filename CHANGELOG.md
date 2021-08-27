@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/2600hz/sds-react-native-components/compare/v1.3.2...v1.3.3) (2021-08-27)
+
+
+### Bug Fixes
+
+* Removing storybook since it's not currently working properly ([6b6f303](https://github.com/2600hz/sds-react-native-components/commit/6b6f303dffb71167b889920d592e87b2b5274e95))
+
 ## [1.3.2](https://github.com/2600hz/sds-react-native-components/compare/v1.3.1...v1.3.2) (2021-08-26)
 
 
