@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es6", "DOM", "es2016", "es2017", "ESNext"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noEmit": false,
@@ -35,7 +35,7 @@
     "target": "ESNext"
   },
   "exclude": [
-    "__tests__ /**/*-test.ts",
+    "__tests__/**/*-test.ts",
     "node_modules",
     "build",
     "coverage",

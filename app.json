@@ -1,9 +1,9 @@
 {
-  "name": "@2600hz/sds-react-native-components",
-  "displayName": "@2600hz/sds-react-native-components",
+  "name": "sds-react-native-components",
+  "displayName": "sds-react-native-components",
   "expo": {
-    "name": "@2600hz/sds-react-native-components",
-    "slug": "@2600hz/sds-react-native-components",
+    "name": "sds-react-native-components",
+    "slug": "sds-react-native-components",
     "version": "1.0.0",
     "platforms": ["ios", "android", "web"],
     "assetBundlePatterns": ["**/*"],
