@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/2600hz/sds-react-native-components/compare/v1.3.3...v1.5.0) (2021-08-31)
+
+
+### Features
+
+* Adding @dfhernandez/js-utilities library ([fc3df08](https://github.com/2600hz/sds-react-native-components/commit/fc3df080e456cd6785d4f3f9cd1b189bf6c7e22b))
+* Adding storybook back ([5be4bf5](https://github.com/2600hz/sds-react-native-components/commit/5be4bf56260c6eb5e0a8e8a9f11e0fcf95090b6e))
+
 ## [1.3.3](https://github.com/2600hz/sds-react-native-components/compare/v1.3.2...v1.3.3) (2021-08-27)
 
 
