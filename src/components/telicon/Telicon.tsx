@@ -1,6 +1,6 @@
+import { getIconSize } from '@dfhernandez/js-utilities';
 import React from 'react';
 import { Use } from 'react-native-svg';
-import { getSize } from '../../utilities/utilities';
 import SvgTelicon from './SvgTelicon';
 import type { TeliconProps } from './types';
 
@@ -13,7 +13,7 @@ export function Telicon ({
   fillSecondary,
 }: // ...props
 TeliconProps): React.ReactElement {
-  const sizeValue = getSize(size);
+  const sizeValue = getIconSize(size);
   const widthValue = sizeValue ?? width;
   const heightValue = sizeValue ?? height;
 

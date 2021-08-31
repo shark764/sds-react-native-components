@@ -1383,6 +1383,11 @@
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-11.0.0.tgz#719cf05fcc1abb6533610a2e0f5dd1e61eac14fe"
   integrity sha512-VoNqai1vR5anRF5Tuh/+SWDFk7xi7oMwHrHrbm1BprYXjB2RJsWLhUrStMssDxEl5lW/z3EUdg8RvH/IUBccSQ==
 
+"@dfhernandez/js-utilities@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.3.6.tgz#5f62ebdee3613f3ea625b49e4746d081fa7ffb43"
+  integrity sha512-VkKl2WGjlner1kDEOVv+qINCbV5KraxuT9QsS2m0Ia93Siyg0cqs7JNX9qfN/qeS7czTKAxbucfQRjWeAg5PUA==
+
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
   resolved "https://registry.npmjs.org/@egjs/hammerjs/-/hammerjs-2.0.17.tgz"

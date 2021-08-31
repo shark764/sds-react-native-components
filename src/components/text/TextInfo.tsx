@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { getFontSize } from '../../utilities/utilities';
+import { getFontSize } from '@dfhernandez/js-utilities';
 import type { TextInfoProps } from './types';
 
 interface STTheme {
