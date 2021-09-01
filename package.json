@@ -54,7 +54,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@dfhernandez/js-utilities": "^0.4.1",
+    "@dfhernandez/js-utilities": "^0.4.2",
+    "@dfhernandez/native-theme": "^0.1.1",
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
     "expo-asset": "~8.3.3",
@@ -135,6 +136,7 @@
     "@2600hz/sds-core": "^1.0.5",
     "@2600hz/sds-telicon": "^1.0.3",
     "@dfhernandez/js-utilities": "*",
+    "@dfhernandez/native-theme": "*",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
