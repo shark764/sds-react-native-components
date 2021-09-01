@@ -32,5 +32,12 @@
     "node_modules/typescript/lib/lib.es6.d.ts"
   ],
   "include": ["**/*.js", "**/*.ts", "./*", "./**/*", "./src"],
-  "types": ["react", "react-dom", "react-native", "react-test-renderer", "jest"]
+  "types": [
+    "react",
+    "react-dom",
+    "react-native",
+    "react-test-renderer",
+    "jest",
+    "styled-components-react-native"
+  ]
 }
