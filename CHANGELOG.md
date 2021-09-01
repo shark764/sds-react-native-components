@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/2600hz/sds-react-native-components/compare/v1.5.0...v1.6.0) (2021-09-01)
+
+
+### Bug Fixes
+
+* Refactoring styled-components declaration ([095bc7c](https://github.com/2600hz/sds-react-native-components/commit/095bc7cbec3428ca46b4bf6138984b356cc21bb8))
+
+
+### Features
+
+* Applying native-theme library ([843e886](https://github.com/2600hz/sds-react-native-components/commit/843e88663220239a05f0f5b365daefd6dbc15f07))
+
 # [1.5.0](https://github.com/2600hz/sds-react-native-components/compare/v1.3.3...v1.5.0) (2021-08-31)
 
 
