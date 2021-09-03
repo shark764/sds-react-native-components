@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/2600hz/sds-react-native-components/compare/v1.6.0...v1.7.0) (2021-09-03)
+
+
+### Features
+
+* Adding SvgFromXml component ([5b35c0a](https://github.com/2600hz/sds-react-native-components/commit/5b35c0aae64f20b90f2d492477d5259bd9a4f5b6))
+
 # [1.6.0](https://github.com/2600hz/sds-react-native-components/compare/v1.5.0...v1.6.0) (2021-09-01)
 
 
