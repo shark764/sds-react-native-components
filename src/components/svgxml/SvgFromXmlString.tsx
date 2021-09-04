@@ -9,13 +9,13 @@ import type { SvgFromXmlStringProps } from './types';
  */
 export function SvgFromXmlString ({
   xml,
-  size = 'default',
+  size,
   width = 100,
   height = 100,
   fill = 'black',
 }: // ...props
 SvgFromXmlStringProps): React.ReactElement {
-  const sizeValue = getIconSize(size);
+  const sizeValue = getIconSize(size ?? '');
   const widthValue = sizeValue ?? width;
   const heightValue = sizeValue ?? height;
 
