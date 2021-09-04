@@ -3,9 +3,9 @@ import type { SvgProps } from 'react-native-svg';
 import type { SizeProps } from '../../utilities/types';
 
 type SvgXmlProps = SvgProps & {
-  name: string;
+  name?: string;
   size?: SizeProps;
-  fillSecondary: string;
+  fillSecondary?: string;
 };
 
 export type SvgXmlFileType = React.FC<
