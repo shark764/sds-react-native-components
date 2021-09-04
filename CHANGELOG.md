@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/2600hz/sds-react-native-components/compare/v1.7.0...v1.7.1) (2021-09-04)
+
+
+### Bug Fixes
+
+* Removing extension from react-native property on package.json ([39e142c](https://github.com/2600hz/sds-react-native-components/commit/39e142c103b9121fe0be617c214486045f98d017))
+
 # [1.7.0](https://github.com/2600hz/sds-react-native-components/compare/v1.6.0...v1.7.0) (2021-09-03)
 
 
