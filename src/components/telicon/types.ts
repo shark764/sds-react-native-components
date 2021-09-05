@@ -2,10 +2,12 @@ import type * as React from 'react';
 import type { SvgProps } from 'react-native-svg';
 import type { SizeProps } from '../../utilities/types';
 
-export type SvgTeliconProps = SvgProps & {
+export interface TeliconWrapperProps {
   fillSecondary: string;
   children: React.ReactNode;
-};
+}
+
+export type SvgTeliconProps = SvgProps & TeliconWrapperProps;
 
 export type TeliconProps = SvgProps & {
   name: string;

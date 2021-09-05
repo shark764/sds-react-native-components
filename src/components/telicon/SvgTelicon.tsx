@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Svg, { Symbol, Path, Ellipse, Circle } from 'react-native-svg';
-import type { SvgTeliconProps } from './types';
+import Svg, { SvgProps, Symbol, Path, Ellipse, Circle } from 'react-native-svg';
+import type { TeliconWrapperProps } from './types';
 
-function SvgTelicon300 ({ children, ...props }: SvgTeliconProps) {
+type SvgToJsxProps = SvgProps & TeliconWrapperProps;
+
+function SvgTelicon ({ children, ...props }: SvgToJsxProps) {
   return (
     <Svg {...props}>
       <Symbol id="account-tree" viewBox="0 0 16 16">
@@ -732,4 +734,4 @@ function SvgTelicon300 ({ children, ...props }: SvgTeliconProps) {
   );
 }
 
-export default SvgTelicon300;
+export default SvgTelicon;

@@ -37,7 +37,7 @@
     "pre-commit": "lint-staged",
     "clean": "rimraf lib",
     "build": "yarn clean && bob build",
-    "prepare": "bob build && husky install",
+    "prepare": "bob build && husky install && yarn svg:jsx",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "yarn lint --fix",
@@ -45,7 +45,7 @@
     "prettify": "yarn run format && yarn run lint:fix",
     "full-check": "yarn run prettify && yarn run typescript",
     "release": "release-it",
-    "svg:jsx": "svgr --template ./templates/svgr-template.js src/assets/telicon-3.0.0.svg > src/components/telicon/SvgTelicon.tsx",
+    "svg:jsx": "svgr --template ./templates/svgr-template.js node_modules/@2600hz/sds-telicon/telicon.svg > src/components/telicon/SvgTelicon.tsx",
     "test": "jest --watchAll",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
@@ -54,6 +54,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@2600hz/sds-telicon": "^1.0.7",
     "@dfhernandez/js-utilities": "^0.4.2",
     "@dfhernandez/native-theme": "^0.1.2",
     "@expo/vector-icons": "^12.0.0",
@@ -133,8 +134,8 @@
     "typescript": "~4.0.0"
   },
   "peerDependencies": {
-    "@2600hz/sds-core": "^1.0.5",
-    "@2600hz/sds-telicon": "^1.0.3",
+    "@2600hz/sds-core": "*",
+    "@2600hz/sds-telicon": "*",
     "@dfhernandez/js-utilities": "*",
     "@dfhernandez/native-theme": "*",
     "react": "*",
