@@ -10,15 +10,15 @@ const TouchableButton = styled.TouchableOpacity<StyledButtonProps>`
   padding: 6px;
 
   ${({ theme, color, bgColor }: StyledButtonProps) => `
-    background-color: ${bgColor ?? theme.colors.button.main};
-    color: ${color ?? theme.colors.font.main}
+    background-color: ${bgColor ?? theme?.colors.button.main};
+    color: ${color ?? theme?.colors.font.main}
   `};
 `;
 const ButtonText = styled.Text<StyledButtonProps>`
   font-size: 28px;
 
   ${({ theme, color }: StyledButtonProps) => `
-  color: ${color ?? theme.colors.font.main}
+    color: ${color ?? theme?.colors.font.main}
   `};
 `;
 
