@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/2600hz/sds-react-native-components/compare/v1.7.3...v1.7.4) (2021-09-05)
+
+
+### Bug Fixes
+
+* Moving packages to devDependencies ([6b6f667](https://github.com/2600hz/sds-react-native-components/commit/6b6f667b2679c249686e71aa03a3a7bdf05be913))
+
 ## [1.7.3](https://github.com/2600hz/sds-react-native-components/compare/v1.7.2...v1.7.3) (2021-09-05)
 
 
