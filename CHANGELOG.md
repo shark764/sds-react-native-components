@@ -1,3 +1,10 @@
+## [1.7.5](https://github.com/2600hz/sds-react-native-components/compare/v1.7.4...v1.7.5) (2021-09-05)
+
+
+### Bug Fixes
+
+* Moving telicon scripts to 'prepare' lifecycle hook ([bece2d3](https://github.com/2600hz/sds-react-native-components/commit/bece2d3d8205e4af41c942af364d81aebf53c5b6))
+
 ## [1.7.4](https://github.com/2600hz/sds-react-native-components/compare/v1.7.3...v1.7.4) (2021-09-05)
 
 
