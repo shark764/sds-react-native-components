@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/2600hz/sds-react-native-components/compare/v1.7.2...v1.7.3) (2021-09-05)
+
+
+### Bug Fixes
+
+* Removing uneeded peerDependencies ([443e8ce](https://github.com/2600hz/sds-react-native-components/commit/443e8ce35cf4dc8cd929bfc57ad867e691d5f99c))
+
 ## [1.7.2](https://github.com/2600hz/sds-react-native-components/compare/v1.7.1...v1.7.2) (2021-09-05)
 
 
