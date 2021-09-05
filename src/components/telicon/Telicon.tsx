@@ -1,6 +1,6 @@
 import React from 'react';
 import { Use } from 'react-native-svg';
-import { getIconSize } from '@dfhernandez/js-utilities';
+import { getIconSize } from '@2600hz/js-utilities';
 import SvgTelicon from './SvgTelicon';
 import type { TeliconProps } from './types';
 

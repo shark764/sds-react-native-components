@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import type { ThemeProps } from '@dfhernandez/native-theme';
+import type { ThemeProps } from '@2600hz/sds-native-theme';
 import type { BaseButtonProps, ButtonProps } from './types';
 
 interface StyledButtonProps extends ThemeProps, BaseButtonProps {}

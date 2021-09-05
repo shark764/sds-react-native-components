@@ -155,6 +155,12 @@ Follow [Semantic Versioning 2.0.0](https://semver.org/) to update project versio
 
 Visit [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more examples.
 
+**Make a release**
+Run following command after your last commit/amend. Then answer with Y/N the prompt
+```bash
+yarn release
+```
+
 ## License
 
 MIT
