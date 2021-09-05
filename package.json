@@ -1,6 +1,6 @@
 {
   "name": "@dfhernandez/sds-react-native-components",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "React native library for shareable components",
   "author": "Armando Cierra, Daniel Hernandez <fhernandez@2600hz.com> (https://github.com/shark764)",
   "main": "lib/commonjs/index.js",
