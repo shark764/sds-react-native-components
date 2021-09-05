@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/2600hz/sds-react-native-components/compare/v1.7.5...v1.7.6) (2021-09-05)
+
+
+### Bug Fixes
+
+* Making styled theme optional ([2135f71](https://github.com/2600hz/sds-react-native-components/commit/2135f71f9e83da1df4a847e3fe18d98ecca621a3))
+
 ## [1.7.5](https://github.com/2600hz/sds-react-native-components/compare/v1.7.4...v1.7.5) (2021-09-05)
 
 
