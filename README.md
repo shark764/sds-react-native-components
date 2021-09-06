@@ -6,13 +6,13 @@ Library that contains all sharable components for all react native applications 
 ## Installation
 
 ```sh
-yarn add @2600hz/sds-react-native-components
+yarn add @dfhernandez/sds-react-native-components
 ```
 
 ## Usage
 
 ```js
-import { Button, Telicon } from "@2600hz/sds-react-native-components";
+import { Button, Telicon } from "@dfhernandez/sds-react-native-components";
 
 // ...
 
@@ -62,7 +62,7 @@ yarn watch
 **Consume the package**
 `Both projects must be placed on same folder, otherwise won't work`
 ```bash
-yarn link @2600hz/sds-react-native-components
+yarn link @dfhernandez/sds-react-native-components
 ```
 
 Build the package
