@@ -1,5 +1,4 @@
 import type * as React from 'react';
-
 import type { ButtonProps as Props } from 'react-native';
 
 import type {
