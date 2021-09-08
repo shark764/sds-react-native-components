@@ -5,14 +5,14 @@
   <br>
   <br>
   <p>
-    <b>@dfhernandez/sds-react-native-components</b>
+    <b>@2600hz/sds-react-native-components</b>
   </p>
   <p>
      <i>Library that contains all sharable components for all react native applications development.</i>
   </p>
   <p>
 
-[![NPM version](https://img.shields.io/npm/v/@dfhernandez/sds-react-native-components?style=flat-square)](https://img.shields.io/npm/v/@dfhernandez/sds-react-native-components?style=flat-square)
+[![NPM version](https://img.shields.io/npm/v/@2600hz/sds-react-native-components?style=flat-square)](https://img.shields.io/npm/v/@2600hz/sds-react-native-components?style=flat-square)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
   </p>
@@ -23,19 +23,19 @@
 # 2600Hz - Commio
 ## _SDS React Native Components Library_
 
-[NPM package](https://www.npmjs.com/package/@dfhernandez/sds-react-native-components)
+[NPM package](https://www.npmjs.com/package/@2600hz/sds-react-native-components)
 
 ## Installation
 
 ```sh
-yarn add @dfhernandez/sds-react-native-components
+yarn add @2600hz/sds-react-native-components
 ```
 
 # Needed packages
 If you don't already have them on your app, yarn will install the following packages needed for usability. These packages are added as peerDependencies
 
-- [@dfhernandez/js-utilities](https://www.npmjs.com/package/@dfhernandez/js-utilities) - Contains useful js functions and shareable configurations
-- [@dfhernandez/sds-native-theme](https://www.npmjs.com/package/@dfhernandez/sds-native-theme) - Contains theme available for react native apps that use styled-components
+- [@2600hz/commio-native-utilities](https://www.npmjs.com/package/@2600hz/commio-native-utilities) - Contains useful js functions and shareable configurations
+- [@2600hz/sds-react-native-theme](https://www.npmjs.com/package/@2600hz/sds-react-native-theme) - Contains theme available for react native apps that use styled-components
 - [Styled-Components](https://styled-components.com/) - Library to style react components
 - [react-native-svg](https://www.npmjs.com/package/react-native-svg) - Provides SVG support to React Native on iOS and Android, and a compatibility layer for the web
 - [tslib](https://www.npmjs.com/package/tslib) - Contains all of the TypeScript helper functions. Even if your project doesn't use Typescript, you need this package for native-components to function properly
@@ -45,8 +45,8 @@ If you already have those libraries on your app, then you need to make the follo
 ```js
 // metro.config.js
 const modules = [
-  '@dfhernandez/js-utilities',
-  '@dfhernandez/sds-native-theme',
+  '@2600hz/commio-native-utilities',
+  '@2600hz/sds-react-native-theme',
   'react',
   'react-dom',
   'react-native',
@@ -90,7 +90,7 @@ module.exports = async function (env, argv) {
 
 _**Styled-Components considerations**_
 We use a theme built for styled-components. Styled components can be used from two sources
-- The one installed automatically when installing @dfhernandez/sds-react-native-components
+- The one installed automatically when installing @2600hz/sds-react-native-components
 - The one installed manually by you on your app 
 
 On the first case, components package will use the theme you set up on ThemeProvider, for your own components and the built-in components in the package.
@@ -104,11 +104,11 @@ There should be only one version of react-native-svg installed, if you manually 
 ## Usage
 
 It relies on styled-components, so it needs a theme set for the application.
-Get the theme from [@dfhernandez/sds-native-theme](https://www.npmjs.com/package/@dfhernandez/sds-native-theme)
-You can set the DefaultTheme as the one from `sds-native-theme`. Create a declaration file, name it for convention `styled.d.ts`
+Get the theme from [@2600hz/sds-react-native-theme](https://www.npmjs.com/package/@2600hz/sds-react-native-theme)
+You can set the DefaultTheme as the one from `sds-react-native-theme`. Create a declaration file, name it for convention `styled.d.ts`
 ```js
 import {} from 'styled-components';
-import { DefaultThemeProps } from '@dfhernandez/sds-native-theme';
+import { DefaultThemeProps } from '@2600hz/sds-react-native-theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme extends DefaultThemeProps {}
@@ -117,7 +117,7 @@ declare module 'styled-components' {
 
 Now use it in your entry point component
 ```js
-import { lightTheme } from '@dfhernandez/sds-native-theme';
+import { lightTheme } from '@2600hz/sds-react-native-theme';
 
 <ThemeProvider theme={lightTheme}>
   {/* <App ... /> */}
@@ -128,7 +128,7 @@ This theme will apply to your components and the ones coming from sds-react-nati
 
 Now in your components
 ```js
-import { Button, Telicon } from "@dfhernandez/sds-react-native-components";
+import { Button, Telicon } from "@2600hz/sds-react-native-components";
 
 // ...
 
@@ -165,7 +165,7 @@ If you want to handle svg files on your own or need a different icon not include
 Add this content to file
 ```js
 declare module '*.svg' {
-  import { SvgXmlFileType } from '@dfhernandez/sds-react-native-components';
+  import { SvgXmlFileType } from '@2600hz/sds-react-native-components';
   const content: SvgXmlFileType;
   export default content;
 }
@@ -175,9 +175,9 @@ Then you can import svg files this way
 import UserIcon from './app/assets/user.svg';
 <UserIcon width={100} height={100} fill="red" />
 ```
-Use svgrrc configuration provided by @dfhernandez/js-utilities to handle how svgs are converted
+Use svgrrc configuration provided by @2600hz/commio-native-utilities to handle how svgs are converted
 ```js
-const { svgrrcBaseConfig } = require('@dfhernandez/js-utilities');
+const { svgrrcBaseConfig } = require('@2600hz/commio-native-utilities');
 module.exports = {
   ...svgrrcBaseConfig,
   native: true,
@@ -186,7 +186,7 @@ module.exports = {
 We use [svgo](https://github.com/svg/svgo) to configure how svg xml should be transformed to JSX. Look for the available plugins, so you can decide what attributes should be moved.
 For instance, we want all colors to be converted to strings if possible (Ex. #f00 to red)
 ```js
-const { svgrrcBaseConfig } = require('@dfhernandez/js-utilities');
+const { svgrrcBaseConfig } = require('@2600hz/commio-native-utilities');
 module.exports = {
   ...svgrrcBaseConfig,
   native: true,
@@ -234,7 +234,7 @@ yarn watch
 **Consume the package**
 `Both projects must be placed on same folder, otherwise won't work`
 ```bash
-yarn link @dfhernandez/sds-react-native-components
+yarn link @2600hz/sds-react-native-components
 ```
 
 **Considerations with packages installed**
@@ -257,7 +257,7 @@ module.exports = function (api) {
 
             // For development, we want to alias the library to the source
             // Remember we have the package folder right next to the app
-            '@dfhernandez/sds-react-native-components': path.join(__dirname, '..', 'sds-react-native-components', 'src/index'),
+            '@2600hz/sds-react-native-components': path.join(__dirname, '..', 'sds-react-native-components', 'src/index'),
           },
         },
       ],
@@ -277,8 +277,8 @@ const escape = require('escape-string-regexp');
 const root = path.resolve(__dirname, '..', 'sds-react-native-components');
 
 const modules = [
-  '@dfhernandez/js-utilities',
-  '@dfhernandez/sds-native-theme',
+  '@2600hz/commio-native-utilities',
+  '@2600hz/sds-react-native-theme',
   'react',
   'react-dom',
   'react-native',
@@ -380,8 +380,8 @@ Components library uses a number of open source projects to work properly:
 - [Styled-Components](https://styled-components.com/) - Library to style react components
 - [react-native-svg](https://www.npmjs.com/package/react-native-svg) - Provides SVG support to React Native on iOS and Android, and a compatibility layer for the web
 - [create-react-native-library](https://www.npmjs.com/package/create-react-native-library) - CLI to scaffold React Native libraries
-- [@dfhernandez/sds-native-theme](https://www.npmjs.com/package/@dfhernandez/sds-native-theme) - React Native Theme for Styled-components
-- [@dfhernandez/js-utilities](https://www.npmjs.com/package/@dfhernandez/js-utilities) - Library written in js for shareable config files and common functions
+- [@2600hz/sds-react-native-theme](https://www.npmjs.com/package/@2600hz/sds-react-native-theme) - React Native Theme for Styled-components
+- [@2600hz/commio-native-utilities](https://www.npmjs.com/package/@2600hz/commio-native-utilities) - Library written in js for shareable config files and common functions
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
