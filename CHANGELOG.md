@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/2600hz/sds-react-native-components/compare/v1.7.7...v1.8.0) (2021-09-08)
+
+
+### Features
+
+* Using props and theme on test components | Button, Text ([5bad3fc](https://github.com/2600hz/sds-react-native-components/commit/5bad3fc653cc4fe8a2630fd1f9bb6e536376c871))
+
 ## [1.7.7](https://github.com/2600hz/sds-react-native-components/compare/v0.1.0...v1.7.7) (2021-09-06)
 
 ## [1.7.6](https://github.com/2600hz/sds-react-native-components/compare/v1.7.5...v1.7.6) (2021-09-05)
