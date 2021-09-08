@@ -1,7 +1,8 @@
 import React from 'react';
-import type { SvgFromXmlProps } from './types';
-import SvgFromXmlString from './SvgFromXmlString';
+
 import SvgFromXmlFile from './SvgFromXmlFile';
+import SvgFromXmlString from './SvgFromXmlString';
+import type { SvgFromXmlProps } from './types';
 
 /**
  * This component should allow passing a xml string

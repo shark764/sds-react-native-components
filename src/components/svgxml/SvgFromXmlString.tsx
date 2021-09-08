@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { SvgXml } from 'react-native-svg';
+
 import { getIconSize } from '@dfhernandez/js-utilities';
+
 import type { SvgFromXmlStringProps } from './types';
 
 /**

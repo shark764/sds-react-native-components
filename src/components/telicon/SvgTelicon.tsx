@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import Svg, { SvgProps, Symbol, Path, Ellipse, Circle } from 'react-native-svg';
+
 import type { TeliconWrapperProps } from './types';
 
 type SvgToJsxProps = SvgProps & TeliconWrapperProps;

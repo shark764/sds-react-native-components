@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { getIconSize } from '@dfhernandez/js-utilities';
+
 import type { SvgFromXmlFileProps } from './types';
 
 /**

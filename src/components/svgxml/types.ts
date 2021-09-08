@@ -1,5 +1,7 @@
 import type React from 'react';
+
 import type { SvgProps } from 'react-native-svg';
+
 import type { SizeProps } from '../../utilities/types';
 
 type SvgXmlProps = SvgProps & {
