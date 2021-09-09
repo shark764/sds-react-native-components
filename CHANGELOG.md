@@ -1,3 +1,5 @@
+## [1.8.1](https://github.com/2600hz/sds-react-native-components/compare/v1.8.0...v1.8.1) (2021-09-09)
+
 # [1.8.0](https://github.com/2600hz/sds-react-native-components/compare/v1.7.7...v1.8.0) (2021-09-08)
 
 
