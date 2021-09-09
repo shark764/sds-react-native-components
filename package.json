@@ -1,5 +1,5 @@
 {
-  "name": "@dfhernandez/sds-react-native-components",
+  "name": "@2600hz/sds-react-native-components",
   "version": "1.8.0",
   "description": "React native library for shareable components",
   "author": "Armando Cierra, Daniel Hernandez <fhernandez@2600hz.com> (https://github.com/shark764)",
@@ -56,8 +56,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@dfhernandez/js-utilities": "^0.5.0",
-    "@dfhernandez/sds-native-theme": "^0.2.0",
+    "@2600hz/commio-native-utilities": "^0.5.1",
+    "@2600hz/sds-react-native-theme": "^0.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.4",
@@ -136,8 +136,8 @@
     "typescript": "~4.0.0"
   },
   "peerDependencies": {
-    "@dfhernandez/js-utilities": "*",
-    "@dfhernandez/sds-native-theme": "*",
+    "@2600hz/commio-native-utilities": "*",
+    "@2600hz/sds-react-native-theme": "*",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",

@@ -12,7 +12,7 @@ yarn
 
 > While it's possible to use [`npm`](https://github.com/npm/cli), the tooling is built around [`yarn`](https://classic.yarnpkg.com/), so you'll have an easier time if you use `yarn` for development.
 
-While developing, you can run the [userportal app](https://github.com/shark764/react-native-commio-userportal) to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
+While developing, you can run the [userportal app](https://github.com/2600hz/commio-native-userportal) to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
 
 To start the packager:
 
@@ -121,7 +121,7 @@ The `package.json` file contains various scripts for common tasks:
 - `yarn expo:start`: start the Metro server for the app.
 - `yarn`: install all dependencies and generate lib/ folder.
 - `yarn link`: create symlink.
-- `yarn link @dfhernandez/sds-react-native-components`: consume symlink on [userportal app](https://github.com/shark764/react-native-commio-userportal).
+- `yarn link @2600hz/sds-react-native-components`: consume symlink on [userportal app](https://github.com/2600hz/commio-native-userportal).
 
 ### Sending a pull request
 

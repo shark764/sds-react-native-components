@@ -4,7 +4,7 @@
     "jsx": "react-native",
     "noEmit": false,
     "paths": {
-      "@dfhernandez/sds-react-native-components": ["./src/index"]
+      "@2600hz/sds-react-native-components": ["./src/index"]
     }
   },
   "exclude": [
@@ -24,7 +24,7 @@
     "metro.config.js",
     "webpack.config.js"
   ],
-  "extends": "@dfhernandez/js-utilities/tsconfig.base",
+  "extends": "@2600hz/commio-native-utilities/tsconfig.base",
   "filesGlob": [
     "typings/index.d.ts",
     "src/**/*.ts",

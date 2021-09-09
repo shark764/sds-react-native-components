@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getIconSize } from '@dfhernandez/js-utilities';
+import { getIconSize } from '@2600hz/commio-native-utilities';
 
 import type { SvgFromXmlFileProps } from './types';
 

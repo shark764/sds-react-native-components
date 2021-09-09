@@ -2,8 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components/native';
 
-import { getFontSize } from '@dfhernandez/js-utilities';
-import type { ThemeProps } from '@dfhernandez/sds-native-theme';
+import { getFontSize } from '@2600hz/commio-native-utilities';
+import type { ThemeProps } from '@2600hz/sds-react-native-theme';
 
 import type { SizeProps } from '../../utilities/types';
 import type { BaseButtonProps, ButtonProps } from './types';

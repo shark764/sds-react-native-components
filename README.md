@@ -42,6 +42,7 @@ If you don't already have them on your app, yarn will install the following pack
 
 # Packages considerations
 If you already have those libraries on your app, then you need to make the following changes on configuration files for the package to function properly
+_Do this on your App root folder_
 ```js
 // metro.config.js
 const modules = [
@@ -317,27 +318,12 @@ If you want to manually convert telicon.svg to component run
 ```bash
 yarn svg:jsx
 ```
+_**Note:** This command is executed every time "yarn install" runs_
 
 **Build the package**
 _Automatically will run `bob build`_
 ```bash
 yarn build
-```
-
-**Run project**
-```bash
-yarn start
-```
-
-Run android
-```bash
-yarn android
-```
-
-Run ios
-```bash
-cd ios & pod install
-yarn ios
 ```
 
 ## Utilities
