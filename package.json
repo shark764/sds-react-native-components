@@ -2,9 +2,9 @@
   "name": "@2600hz/sds-react-native-components",
   "version": "1.8.2",
   "description": "React native library for shareable components",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "files": [
