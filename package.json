@@ -2,12 +2,11 @@
   "name": "@2600hz/sds-react-native-components",
   "version": "1.8.1",
   "description": "React native library for shareable components",
-  "author": "Armando Cierra, Daniel Hernandez <fhernandez@2600hz.com> (https://github.com/shark764)",
-  "main": "lib/commonjs/index.js",
-  "module": "lib/module/index.js",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "types": "lib/typescript/src/index.d.ts",
   "files": [
     "bin",
     "build",
@@ -17,13 +16,16 @@
     "android",
     "ios",
     "cpp",
-    "sds-react-native-components.podspec",
+    "2600hz-sds-react-native-components.podspec",
     "!android/build",
     "!ios/build",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__"
   ],
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "android": "react-native run-android",
     "start:android": "yarn android && yarn start",
@@ -51,19 +53,19 @@
     "test": "jest --watchAll",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods",
-    "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "bootstrap": "yarn example && yarn && yarn pods"
+  },
+  "author": "Armando Cierra <acierra@2600hz.com>, Daniel Hernandez <fhernandez@2600hz.com> (https://github.com/shark764)",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@2600hz/commio-native-utilities": "^0.5.1",
-    "@2600hz/sds-react-native-theme": "^0.2.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "0.63.4",
+    "@2600hz/commio-native-utilities": "^0.5.2",
+    "@2600hz/sds-react-native-theme": "^0.2.3",
     "react-native-svg": "12.1.1",
     "styled-components": "^5.3.0",
-    "tslib": "^2.0.3"
+    "tslib": "^2.1.0"
   },
   "devDependencies": {
     "@2600hz/sds-telicon": "^1.0.7",
@@ -72,13 +74,6 @@
     "@expo/vector-icons": "^12.0.0",
     "@react-native-community/eslint-config": "^3.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
-    "@storybook/addon-actions": "^5.3",
-    "@storybook/addon-knobs": "^5.3",
-    "@storybook/addon-links": "^5.3",
-    "@storybook/addon-ondevice-actions": "^5.3.23",
-    "@storybook/addon-ondevice-knobs": "^5.3.25",
-    "@storybook/react-native": "^5.3.25",
-    "@storybook/react-native-server": "^5.3.23",
     "@svgr/cli": "^5.5.0",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
@@ -120,7 +115,9 @@
     "lint-staged": "^11.1.2",
     "metro-react-native-babel-preset": "^0.66.2",
     "pod-install": "^0.1.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
     "react-native-builder-bob": "^0.18.1",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-reanimated": "~2.2.0",
@@ -133,7 +130,7 @@
     "release-it": "^14.2.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.0.0"
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "@2600hz/commio-native-utilities": "*",
@@ -142,13 +139,6 @@
     "react-native": "*",
     "react-native-svg": "*",
     "styled-components": "*"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "react-native-builder-bob": {
     "source": "src",
