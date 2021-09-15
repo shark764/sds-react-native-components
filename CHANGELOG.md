@@ -1,3 +1,11 @@
+## [1.8.3](https://github.com/2600hz/sds-react-native-components/compare/v1.8.2...v1.8.3) (2021-09-15)
+
+
+### Bug Fixes
+
+* Changing back 'types' value in package.json ([7faa9be](https://github.com/2600hz/sds-react-native-components/commit/7faa9be02849b8c03a550ea7cfa24d7d8aa1d6c6))
+* Removing unneded files for package ([7ccfce1](https://github.com/2600hz/sds-react-native-components/commit/7ccfce1d285b7a4600569f6a6c7cb9ca8af33340))
+
 ## [1.8.2](https://github.com/2600hz/sds-react-native-components/compare/v1.8.1...v1.8.2) (2021-09-15)
 
 ## [1.8.1](https://github.com/2600hz/sds-react-native-components/compare/v1.8.0...v1.8.1) (2021-09-09)
