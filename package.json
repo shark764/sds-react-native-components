@@ -1,6 +1,6 @@
 {
   "name": "@2600hz/sds-react-native-components",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "description": "React native library for shareable components",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",

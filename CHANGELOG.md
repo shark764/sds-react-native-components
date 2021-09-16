@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/2600hz/sds-react-native-components/compare/v1.8.3...v1.9.0) (2021-09-16)
+
+
+### Features
+
+* Adding available telicon names type to give autocomplete icon names ([252506d](https://github.com/2600hz/sds-react-native-components/commit/252506d422f519f70518bba3c392b52959114f87))
+
 ## [1.8.3](https://github.com/2600hz/sds-react-native-components/compare/v1.8.2...v1.8.3) (2021-09-15)
 
 
