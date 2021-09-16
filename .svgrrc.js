@@ -5,6 +5,10 @@ module.exports = {
 
   // icon: true,
   native: true,
+  // typescript: true,
+  // babel: false,
+  // ext: 'tsx',
+  // prettier: false,
 
   // We only need template for SvgTelicon component
   // template: require('./templates/svgr-template'),
