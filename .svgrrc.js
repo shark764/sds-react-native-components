@@ -4,7 +4,7 @@ module.exports = {
   ...svgrrcBaseConfig,
 
   // icon: true,
-  native: true,
+  // native: true,
   // typescript: true,
   // babel: false,
   // ext: 'tsx',

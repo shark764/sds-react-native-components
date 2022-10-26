@@ -14,10 +14,10 @@
   dependencies:
     "@2600hz/commio-native-utilities" "^0.5.2"
 
-"@2600hz/sds-telicon@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@2600hz/sds-telicon/-/sds-telicon-1.0.7.tgz#e62afb5d1330a9d6489a81e51f29335e2af6271b"
-  integrity sha512-mhTA3RTNPDdPrafSW7CBJrs8NXp9HxUkD0PZCuUTjfubIqVw2j8S7eqhvqq+xM2ZtMPqtHAKq99xztN/hQKGww==
+"@2600hz/sds-telicon@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-telicon/-/sds-telicon-1.1.0.tgz#7aaf69a4f6d4fdacd4ba2e004e7b14db1bb4d96d"
+  integrity sha512-KyoIoElm4LCyWRjA5qm/7zEysS1XLiBsV6qIqMW5/wkAeFvUBYExYTCasTaXgxO4BpjY+2g8pMi7MO/hSrifOg==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"

@@ -16,8 +16,12 @@ export interface BaseButtonProps {
 export type ButtonProps = Props &
 BaseButtonProps & {
   content?: string;
-  icon?: boolean;
+  icon?: string;
   iconPosition?: PositionProps;
-  iconName?: string;
+  href?: string;
+  targetBlank?: boolean;
+  routerLink?: boolean;
+  'data-tip'?: string;
+  'data-for'?: string;
   children?: React.ReactNode;
 };
